@@ -12763,3 +12763,12 @@
   description:
     - "Lower the TP8 concurrency 6 stream interval from 128 to 50 and rerun every point on the same lmsysorg/sglang-rocm:muse-spark-open-mi355-1106 image; the rest of the recipe and the search space are unchanged."
   pr-link: https://github.com/SemiAnalysisAI/InferenceX/pull/4983
+
+- config-keys:
+    - dsv41flash-fp4-mi355x-sglang-agentic-dspark
+  scenario-type:
+    - agentic-coding
+  description:
+    - "Cap running requests for P90 interactivity: TP4 concurrency 1 from 2 to 1, TP2 concurrency 4 from 8 to 1, 16 from 32 to 4, and 32 from 64 to 8. Sessions past the cap queue instead of joining the decode batch."
+    - "Image, search space and every other flag are unchanged."
+  pr-link: https://github.com/SemiAnalysisAI/InferenceX/pull/XXX
